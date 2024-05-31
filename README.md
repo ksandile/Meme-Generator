@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Documentation:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Header Component:
 
-## Available Scripts
+Purpose: This component renders the header section of the Meme Generator application. It includes a logo or image, the title of the application, and a subtitle or project description.
 
-In the project directory, you can run:
+### JSX Structure:
 
-### `npm start`
+### Image:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Displays an image (troll1.jpeg) which acts as a logo or visual representation for the header. The alt attribute provides alternative text for the image.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Title:
 
-### `npm test`
+Displays the main title of the application: "Meme Generator".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Subtitle:
 
-### `npm run build`
+Displays a subtitle or project description: "React Course - Project 3".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+___
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Meme Component:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Purpose: This component allows users to generate a random meme image from a set of templates and add custom text to the top and bottom of the image.
 
-### `npm run eject`
+### State Variables:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+meme: Holds the current meme data, including topText, bottomText, and randomImage.
+allMemes: Stores the list of meme templates fetched from the Imgflip API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### useEffect:
 
-## Learn More
+Fetches meme templates from the Imgflip API when the component mounts and sets allMemes with the fetched data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### handleChange Function:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Updates the meme state with the user's input for topText and bottomText.
 
-### Code Splitting
+## JSX Structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Form:
 
-### Analyzing the Bundle Size
+Contains two input fields for topText and bottomText and a button to generate a new meme image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Meme Display:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Displays the selected meme image with the custom text on top and bottom.
